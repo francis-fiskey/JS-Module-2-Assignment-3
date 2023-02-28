@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body class='bg-light'>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mt-4">
+        <div class="card text-center">
+          <div class="card-header">
+            <h3 class="fw-bold">Module 2 Assignment 3 Requirements</h3>
+            <p class="lead fs-6">
+              (Vowel or consonant?) Write a program that prompts the user to enter a letter and check whether the letter
+              is a vowel or consonant. Here is a sample run:
+            </p>
+            <div class="card-body bg-primary bg-gradient">
+              <div class="card">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item text-danger text-start">
+                    <!-- HTML generated using hilite.me -->
+                    <div
+                      style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                      <pre style="margin: 0; line-height: 125%">Enter a letter: B
+<span class="fw-bold">B is a consonant</span>
+
+
+Enter a letter grade: a
+<span class="fw-bold">a is a vowel</span>
+
+
+Enter a letter grade: #
+<span class="fw-bold"># is an invalid input</span>
+</pre>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-6 mt-4">
+        <div class="card text-center">
+          <div class="card-header bg-secondary.bg-gradient">
+            <h3 class="fw-bold">Workspace</h3>
+            <p class="lead fs-6">Use Javascript to update the below text using the script.js file:</p>
+          </div>
+          <div class="card-body bg-primary">
+            <div class="card">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item fw-bold">
+                  Please enter a letter:
+                  <input type="text" id="form-input" />
+                  <button id="calculate" class="btn btn-primary">Calculate</button>
+                </li>
+                <li class="list-group-item" id='form-response'>
+                  <span class="fst-italic">No letter entered</span>
+                </li>
+                <li class="list-group-item fw-bold">
+                  <!-- Button trigger modal -->
+                  <button type="button" id="btn-unit-tests" class="btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#unitTestModal">
+                    Run Unit Tests
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Unit Test Modal -->
+  <div class="modal fade" id="unitTestModal" tabindex="-1" aria-labelledby="unitTestModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="unitTestModalLabel">Module 2 Assignment 3: Unit Test Outcomes</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <!-- Unit Test 1 -->
+              <div class="col-lg-3 mt-4">
+                <div class="card text-center">
+                  <div class="card-header">
+                    <h3 class="fw-bold">Unit Test #1</h3>
+                  </div>
+                  <div class="card-body" style="--bs-bg-opacity: .25;">
+                    <h5 class="card-title" id='testone-title'>Test Not Run</h5>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">
+                      <p class="card-text">Test parameters are found below</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-info" style="--bs-bg-opacity: .25;">char = <span
+                          id="param-testone-char"></span></li>
+                    </ul>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">Expected Outcome</div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-info" style="--bs-bg-opacity: .25;">
+                        response = <span id="expected-outcome-testone-response"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">Realized Outcome</div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-warning" style="--bs-bg-opacity: .25;">
+                        response = <span id='realized-outcome-testone-response'></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- End of Unit Test 1 -->
+              <!-- Unit Test 2 -->
+              <div class="col-lg-3 mt-4">
+                <div class="card text-center">
+                  <div class="card-header">
+                    <h3 class="fw-bold">Unit Test #2</h3>
+                  </div>
+                  <div class="card-body" style="--bs-bg-opacity: .25;">
+                    <h5 class="card-title" id='testtwo-title'>Test Not Run</h5>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">
+                      <p class="card-text">Test parameters are found below</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-info" style="--bs-bg-opacity: .25;">char = <span
+                          id="param-testtwo-char"></span></li>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">Expected Outcome</div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-info" style="--bs-bg-opacity: .25;">
+                        response = <span id="expected-outcome-testtwo-response"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">Realized Outcome</div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-warning" style="--bs-bg-opacity: .25;">
+                        response = <span id='realized-outcome-testtwo-response'></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- End of Unit Test 2 -->
+              <!-- Unit Test 3 -->
+              <div class="col-lg-3 mt-4">
+                <div class="card text-center">
+                  <div class="card-header">
+                    <h3 class="fw-bold">Unit Test #4</h3>
+                  </div>
+                  <div class="card-body" style="--bs-bg-opacity: .25;">
+                    <h5 class="card-title" id='testthree-title'>Test Not Run</h5>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">
+                      <p class="card-text">Test parameters are found below</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-info" style="--bs-bg-opacity: .25;">char = <span
+                          id="param-testthree-char"></span></li>
+                    </ul>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">Expected Outcome</div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-info" style="--bs-bg-opacity: .25;">
+                        response = <span id="expected-outcome-testthree-response"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">Realized Outcome</div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-warning" style="--bs-bg-opacity: .25;">
+                        response = <span id='realized-outcome-testthree-response'></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- End of Unit Test 3 -->
+              <!-- Unit Test 4 -->
+              <div class="col-lg-3 mt-4">
+                <div class="card text-center">
+                  <div class="card-header">
+                    <h3 class="fw-bold">Unit Test #3</h3>
+                  </div>
+                  <div class="card-body" style="--bs-bg-opacity: .25;">
+                    <h5 class="card-title" id='testfour-title'>Test Not Run</h5>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">
+                      <p class="card-text">Test parameters are found below</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-info" style="--bs-bg-opacity: .25;">char = <span
+                          id="param-testfour-char"></span></li>
+                    </ul>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">Expected Outcome</div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-info" style="--bs-bg-opacity: .25;">
+                        response = <span id="expected-outcome-testfour-response"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">Realized Outcome</div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-warning" style="--bs-bg-opacity: .25;">
+                        response = <span id='realized-outcome-testfour-response'></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- End of Unit Test 4 -->
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+  <script src="script.js"></script>
+  <script src="unit-tests.js"></script>
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+</body>
+
+</html>
